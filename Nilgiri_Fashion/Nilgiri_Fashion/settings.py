@@ -29,11 +29,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    "crispy_bootstrap5",
     'App_Login',
     'App_Shop',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 # Custom user model
 AUTH_USER_MODEL = 'App_Login.User'
 
@@ -122,5 +124,5 @@ MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
-LOGIN_URL = '/'
+LOGIN_URL = '/account/login/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
